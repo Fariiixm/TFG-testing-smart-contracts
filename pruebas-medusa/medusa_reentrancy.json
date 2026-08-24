@@ -16,7 +16,7 @@
 		"coverageExclusions": [],
 		"revertReporterEnabled": false,
 		"targetContracts": [
-			"CounterMedusaTest"
+			"ReentrancyMedusaTest"
 		],
 		"predeployedContracts": {},
 		"targetContractsBalances": [],
@@ -85,7 +85,7 @@
 	"compilation": {
 		"platform": "crytic-compile",
 		"platformConfig": {
-			"target": "medusa/CounterMedusa.sol",
+			"target": "medusa/ReentrancyMedusaTest.sol",
 			"solcVersion": "",
 			"exportDirectory": "",
 			"args": []

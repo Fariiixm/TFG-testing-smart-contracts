@@ -1,6 +1,6 @@
 // Archivo: src/Counter.sol
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.34;
+pragma solidity 0.8.13;
 
 contract Counter {
     uint16 public number;
@@ -15,6 +15,7 @@ contract Counter {
 
         for (uint16 i = 0; i < times; i++) {
             number++;
+            if (number % 7 == 0 && number != 0) number++;
         }
     }
 
