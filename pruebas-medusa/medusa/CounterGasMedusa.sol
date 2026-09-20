@@ -41,18 +41,18 @@ contract MedusaGasCounterTest is CounterGas {
     }
 
     function testGasCalldata() public {
-        checkcalldata(0);
         uint256 gas1 = gasleft();
         checkcalldata(0);
         uint256 gas2 = gasleft();
 
-        checkcalldata(1);
         uint256 gas3 = gasleft();
+        checkcalldata(1);
+        uint256 gas4 = gasleft();
 
         uint256 gasUsed1 = gas1 - gas2;
-        uint256 gasUsed2 = gas2 - gas3;
+        uint256 gasUsed2 = gas3 - gas4;
 
         assert(gasUsed1 < 38);
-        //assert(gasUsed2 < 39);
+        assert(gasUsed2 < 39);
     }
 }
